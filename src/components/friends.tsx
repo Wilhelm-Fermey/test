@@ -4,15 +4,15 @@ import SideBar from './sidebar'
 
 function Friends() {
   return (
-
-    <div className="  bg-[#1e1e4e]">
+          
+        <div className=" h-screen w-screen  bg-[#1e1e4e]">
 
           <Navbar />
           <SideBar />
 
-        <span className="bg-[#1e1e4e] h-screen w-screen items-center justify-center flex ">
-            <div className="bg-white h-3/4 w-3/4 rounded-xl ">
-                
+          <div className="h-5/6 w-11/12 items-center justify-center flex" >
+            <div className=" bg-white h-5/6 w-11/12 rounded-xl">
+
                 <p className=" text-lg font-mono p-6 ml-4 "> Search you friends here: </p> 
 
                 <form action="" className=" pl-8 relative w-max">
@@ -25,7 +25,7 @@ function Friends() {
 
 
             </div>
-        </span>
+          </div>
 
     </div>
       

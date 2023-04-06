@@ -5,16 +5,16 @@ function ButtonNewChannel() {
     const [open, setOpen] = useState(false);
   
     return (
-            <div>
+
+          <div>
   
-              <div className="absolute m-10 right-28 text-center w-80 px-3 py-1 border shadow-lg rounded-xl font-mono cursor-pointer
+              <div className="abosulte top-1 m-2 my-5  text-center w-3/12 py-2 border shadow-lg rounded-xl font-mono cursor-pointer
                 hover:bg-gray-100 transition-all" 
                 onClick={() => setOpen(!open)} >
                 New channel
               </div>
   
-              <span className= {` absolute p-2 m-10 right-28 border shadow-lg 
-              text-center w-80 top-44 rounded-xl ${ open ? "opaccity-100" : "opacity-0"} transition-all`}  >
+              <span className= {`absolute left-1/4 top-0 mt-5 m-10 p-2 border shadow-lg text-center w-3/12 rounded-xl ${ open ? "opaccity-100" : "opacity-0"} transition-all`}  >
                 
                 <div className="bg-white border rounded shadow-sm">
                   <h1 className=" m-2 font-bold ">Select user:</h1>

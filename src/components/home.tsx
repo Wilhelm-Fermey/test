@@ -5,11 +5,12 @@ import SideBar from './sidebar'
 
 function Home() {
   return (
-    <div className="  bg-[#1e1e4e]">
+
+    <div className=" h-screen w-screen bg-[#1e1e4e]">
       <Navbar />
       <SideBar />  
 
-        <span className=" h-screen w-3/4 items-center justify-center flex">
+        <span className=" w-3/4 h-2/3 items-center justify-center flex">
           <div className="  " >
             <img src='/pong.png' width='500px'/>
           </div>
@@ -19,6 +20,7 @@ function Home() {
         </span>
 
     </div>
+
   )
 }
 export default Home
