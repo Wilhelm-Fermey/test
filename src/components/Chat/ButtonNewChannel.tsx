@@ -1,12 +1,11 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 function ButtonNewChannel() {
 
     const [open, setOpen] = useState(false);
-  
-    return (
 
-          <div>
+    return (
+          <div >
   
               <div className="abosulte top-1 m-2 my-5  text-center w-3/12 py-2 border shadow-lg rounded-xl font-mono cursor-pointer
                 hover:bg-gray-100 transition-all" 
