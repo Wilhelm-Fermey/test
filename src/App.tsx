@@ -9,8 +9,8 @@ import Home from './components/home';
 function App() {
   return (
     <div>
-      <Routes>
-
+      <Routes> 
+{/* hiiiiiiiii	 */}
        <Route path='/' element={<Firstpage />}> </Route> 
        <Route path='/home' element={<Home />}> </Route> 
        <Route path='/chat' element={<Chat />}> </Route> 
