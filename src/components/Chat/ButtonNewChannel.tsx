@@ -21,10 +21,17 @@ function ButtonNewChannel() {
                   <ul className=" m-2 p-2 border border-gray-200 rounded text-left hover:bg-gray-100 transition-all cursor-pointer " >User 2</ul>
                   <ul className=" m-2 p-2 border border-gray-200 rounded text-left hover:bg-gray-100 transition-all cursor-pointer " >User 3</ul>
                 </div>
+
                 <div className=" bg-white border rounded mt-2 shadow-sm ">
-                  <p className=" font-mono font-bold">Password: </p>
+                  <p className=" font-mono">Password: </p>
                   <input className="border rounded text-center m-1 shadow-sm " type="text" />
                 </div>
+
+                <div className=" bg-white border rounded mt-2 shadow-sm ">
+                  <p className=" font-mono">Name: </p>
+                  <input className="border rounded text-center m-1 shadow-sm " type="text" />
+                </div>
+
                 <div className=" bg-gray-100 border-2 rounded mt-2 shadow-sm hover:bg-white transition-all cursor-pointer">
                   <p> Create </p>
                 </div>
