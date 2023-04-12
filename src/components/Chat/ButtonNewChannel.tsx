@@ -7,13 +7,13 @@ function ButtonNewChannel() {
     return (
           <div >
   
-              <div className="abosulte top-1 m-2 my-5  text-center w-3/12 py-2 border shadow-lg rounded-xl font-mono cursor-pointer
-                hover:bg-gray-100 transition-all" 
+              <div className= {` abosulte top-1 m-2 my-5  text-center w-3/12 py-2 border-2 shadow-lg rounded-xl font-mono cursor-pointer
+                hover:bg-gray-100 transition-all ${ open ? 'bg-gray-100' : '' } `} 
                 onClick={() => setOpen(!open)} >
                 New channel
               </div>
   
-              <span className= {`absolute left-1/4 top-0 mt-5 m-10 p-2 border shadow-lg text-center w-3/12 rounded-xl ${ open ? "opaccity-100" : "opacity-0"} transition-all`}  >
+              <span className= {`absolute z-50 left-1/4 top-0 mt-5 m-10 p-2 border shadow-lg text-center w-3/12 rounded-xl bg-white ${ open ? "" : "hidden"} transition-all`}  >
                 
                 <div className="bg-white border rounded shadow-sm">
                   <h1 className=" m-2 font-bold ">Select user:</h1>
@@ -38,7 +38,6 @@ function ButtonNewChannel() {
               </span>
   
             </div>
-             
     )
   }
   export default ButtonNewChannel;
