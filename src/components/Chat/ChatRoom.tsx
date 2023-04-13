@@ -7,18 +7,30 @@ const NewRoom = ({Name}:{Name:string}) => {
 
   const [open, setOpen] = useState(false);
   const inputRef:any = useRef();
+  let ref = useRef(document.createElement('div'));
 
   const HandleSubmit = (e:any) => {
     e.preventDefault();
     console.log(inputRef.current.value);
     inputRef.current.value="";
-  }
+}
+
+  useEffect(() => {
+
+    const ClickOutside = (event:any) => {
+      if (!ref.current.contains(event.target))
+        setOpen(false);
+    };
+    
+    document.addEventListener('mousedown', ClickOutside);
+    return () => {document.removeEventListener('mousedown', ClickOutside)}
+  }, [ref]);
 
   return (
     <div>
       <div className={` m-2 p-2 border border-gray-200 rounded text-left hover:bg-gray-100 transition-all cursor-pointer ${ open ? 'bg-gray-100' : '' } `} onClick={() => setOpen(!open)}> {Name} </div>
 
-      <div className= {` absolute left-1/3 top-0 h-full w-7/12 z-20 rounded-xl border-2 shadow-lg font-mono transition-all flex justify-center ${ open ? "" : " hidden  "} `}>
+      <div ref={ref} className= {` absolute left-1/3 top-0 h-full w-7/12 z-20 rounded-xl border-2 shadow-lg font-mono transition-all flex justify-center ${ open ? "" : " hidden  "} `}>
         <div className='w-full h-7 text-lg m-1'>
           {Name}
         </div>
@@ -29,7 +41,6 @@ const NewRoom = ({Name}:{Name:string}) => {
           <input ref={inputRef} placeholder="Enter your text here ..." className=" border-2 border-zinc-500 text-center p-1 rounded-xl m-1 shadow-sm w-2/3 font-sans " type="text" />
           <button className='flex justify-center items-center'> <BiPaperPlane className=' text-2xl mx-2 text-zinc-500' /> </button>
         </form>
-
       </div>
 
     </div>
